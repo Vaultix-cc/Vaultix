@@ -1,0 +1,44 @@
+# C/C++ build output
+VaultixSDK/cpp/build/
+
+# Compiled object/library files
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Java
+target/
+*.class
+*.jar
+
+# C#
+bin/
+obj/
+*.user
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# IDE / OS
+.vs/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

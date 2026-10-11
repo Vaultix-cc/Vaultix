@@ -1,0 +1,36 @@
+{
+  "_comment": "Golden vectors for Vaultix response signing (vaultix-resp-v1). Shared by backend/tests/test_unit_response_signing.py and the C++ SDK test harness. TEST KEY ONLY: the seed is public; never trust it in a release build.",
+  "seed_hex": "69021023316c575e8b7d05dd018809593d90d005fbdb1fd104a136322cf3054c",
+  "public_key_hex": "3446279cd5e1d6e691c3e35db837c803c6272056951e15c280e531bd167d26a8",
+  "key_id": "vx-sig-93a08c6579dcf5bd",
+  "vectors": [
+    {
+      "nonce": "3f9a1c0e5b7d2468ace013579bdf2468",
+      "signed_at": 1790000000,
+      "method": "GET",
+      "path_and_query": "/api/files/download/Tools%20Valuables.json?productId=74d8b072-46fe-4c29-a53d-3f2aabfff895",
+      "status": 200,
+      "body_hex": "676f6c64656e20626f647900ff0a",
+      "encryption_key": "enc_key_golden_0123",
+      "encryption_iv": "iv_golden_4567",
+      "content_type": "application/octet-stream",
+      "body_sha256": "36f190070daa04fa3aa09be9810680c694ba0a3e890a9b85d89aa5508041e2e5",
+      "canonical": "vaultix-resp-v1\nvx-sig-93a08c6579dcf5bd\n3f9a1c0e5b7d2468ace013579bdf2468\n1790000000\nGET\n/api/files/download/Tools%20Valuables.json?productId=74d8b072-46fe-4c29-a53d-3f2aabfff895\n200\n36f190070daa04fa3aa09be9810680c694ba0a3e890a9b85d89aa5508041e2e5\nenc_key_golden_0123\niv_golden_4567\napplication/octet-stream",
+      "signature": "G9b5q6DWTEGobUM4ftkx1kMqj3usucWwsIg8JwtJUbCvv6WJzX_XwAgc3_pI4h0oWd2qbI-GAgWMMDR2QWRxAQ"
+    },
+    {
+      "nonce": "Zm9vYmFyX2Jhei1xdXV4LTEyMzQ1Ng",
+      "signed_at": 1790000123,
+      "method": "POST",
+      "path_and_query": "/api/app_auth/login_key",
+      "status": 401,
+      "body_hex": "7b2264657461696c223a22496e76616c6964206b6579227d",
+      "encryption_key": "",
+      "encryption_iv": "",
+      "content_type": "application/json",
+      "body_sha256": "53c4c95ff90d3fb42ad4f6e9f732a95d1100c6682367ee3674ae74f98badb28d",
+      "canonical": "vaultix-resp-v1\nvx-sig-93a08c6579dcf5bd\nZm9vYmFyX2Jhei1xdXV4LTEyMzQ1Ng\n1790000123\nPOST\n/api/app_auth/login_key\n401\n53c4c95ff90d3fb42ad4f6e9f732a95d1100c6682367ee3674ae74f98badb28d\n\n\napplication/json",
+      "signature": "OZNc9qnVt_KQLcJ7RX8nJoKrhriV35RJA5SCZgbiIbE8MtvRRbGC2kp4OiB4tVqexQjomnalqZEfGPxDioGcDA"
+    }
+  ]
+}

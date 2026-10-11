@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>Vaultix</RootNamespace>
+    <AssemblyName>VaultixSDK</AssemblyName>
+    <Version>2.0.0</Version>
+    <Authors>Vaultix</Authors>
+    <Description>C# client library for the Vaultix API: license keys, end-to-end encrypted downloads, signed responses</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <!-- The test and example projects live below this folder: never compile them into the SDK. -->
+  <ItemGroup>
+    <Compile Remove="tests/**;examples/**" />
+    <None Remove="tests/**;examples/**" />
+    <EmbeddedResource Remove="tests/**;examples/**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.5.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="VaultixSDK.Tests" />
+  </ItemGroup>
+
+</Project>
